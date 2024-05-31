@@ -6,16 +6,26 @@ import GoogleMapComponent from "./GoogleMapComponent";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col items-center bg-[#00241C] w-full pb-56 text-white pt-28  p-5 sm:p-20 ">
-      <div className="flex flex-col justify-center items-center gap-4">
+    <div className="flex flex-col items-center bg-[#00241C] w-full pb-56 text-white pt-28  p-5 sm:p-20 relative">
+      {/* <Image
+      src={cactusPlant}
+      alt="cactus"
+      className="absolute top-96 right-0"
+      />
+      <Image
+      src={aloveraPlant}
+      alt="cactus"
+      className="absolute top-40 left-24"
+      /> */}
+      <div className="flex flex-col justify-center items-center gap-4 z-10">
         <h1 className="text-3xl text-center">Citizens&apos; Portal of Medicinal Plants</h1>
         <p className="text-xl text-center">Your Guide to Nature&apos;s Pharmacy!</p>
       </div>
-      <div className="pt-16 text-sm text-center">
+      <div className="pt-16 text-sm text-center z-10">
         <p>Type your term below and let’s start this journey together!</p>
       </div>
 
-      <div className="py-10 w-[100%]">
+      <div className="py-10 w-[100%] z-10">
         <div className="flex rounded-t-2xl bg-black z-10 w-[90%] sm:w-[50%] mx-auto">
           <h4 className="py-1 px-2 sm:py-2 sm:px-4 md:py-3 md:px-5 bg-white rounded-tl-2xl rounded-br-none text-black text-xs sm:text-sm md:text-base">
             For Human Use
@@ -62,11 +72,14 @@ const HomePage = () => {
           </div>
           <div className="flex-1 flex items-center justify-center">
             <button className="px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 bg-black text-white rounded text-xs sm:text-sm md:text-base">
-              Black
+              Search
             </button>
           </div>
         </div>
 
+      </div>
+      <div className="relative">
+        <h1 className="py-7 pb-16 z-10">Find Herbs in a Specific Location/Region</h1>
       </div>
 
 

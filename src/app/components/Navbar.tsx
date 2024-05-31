@@ -17,7 +17,7 @@ const Navbar = () => {
 
       <nav className='sm:flex justify-between items-center p-2 sm:p-5 px-5 sm:px-10 pl-20 hidden'>
         <ul className='flex gap-10 justify-center items-center'>
-          <h1 className='text-xl mr-3 sm:mr-10'>CPMP</h1>
+          <h1 className='text-xl sm:ml-10 mr-10 sm:mr-10'>CPMP</h1>
           <li className='bg-black py-2 px-4 rounded-lg'>Home</li>
           <li>Explore and Search</li>
           <li>Curate</li>

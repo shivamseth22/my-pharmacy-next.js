@@ -7,7 +7,7 @@ import linkedIn from "../../../public/assets/footerIcon/linkedIn.svg";
 const Footer = () => {
   return (
     <>
-      <div className="bg-[#022C22] w-full text-white h-[450px] flex flex-col justify-center items-center sm:px-20">
+      <div className="bg-[#022C22] w-full text-white h-[550px] flex flex-col justify-center items-center sm:px-20 py-32">
         <div className="flex flex-wrap justify-around items-center gap-0 sm:gap-20 sm:mr-10 w-full">
           <div>
             <ul className="p-5">
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="flex justify-end px-5 sm:px-20 bg-[#022C22] p-2 w-full text-white">
+      <p className="flex justify-center sm:justify-end px-5 sm:px-20 bg-[#022C22] p-2 w-full text-white">
         © 2024 CPMP. All rights reserved
       </p>
     </>
