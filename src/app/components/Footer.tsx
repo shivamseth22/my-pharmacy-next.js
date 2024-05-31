@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="flex justify-center sm:justify-end px-5 sm:px-20 bg-[#022C22] p-2 w-full text-white">
+      <p className="flex justify-center sm:justify-end px-5 sm:px-20 bg-[#022C22] text-xs p-2 w-full text-white">
         © 2024 CPMP. All rights reserved
       </p>
     </>

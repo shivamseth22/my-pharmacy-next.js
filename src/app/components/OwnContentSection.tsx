@@ -32,7 +32,7 @@ const OwnContentSection = () => {
         </button>
       </div>
 
-      <div className="my-20 flex flex-col items-center  justify-center min-h-[516px]">
+      <div className="my-10 flex flex-col items-center  justify-center min-h-[516px]">
         <h1 className="max-w-5xl text-4xl text-center  ">
           Contribute to our knowledge pool. Upload data related to any of the
           above categories and help us grow together!

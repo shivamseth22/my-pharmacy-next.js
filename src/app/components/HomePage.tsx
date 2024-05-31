@@ -6,7 +6,7 @@ import GoogleMapComponent from "./GoogleMapComponent";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col items-center bg-[#00241C] w-full pb-56 text-white pt-28  p-5 sm:p-20 relative">
+    <div className="flex flex-col items-center bg-[#00241C] w-full pb-10 sm:pb-56 text-white pt-28  p-5 sm:p-20 relative">
       {/* <Image
       src={cactusPlant}
       alt="cactus"
@@ -40,11 +40,11 @@ const HomePage = () => {
 
         {/* this is the search section  */}
         <div className="flex justify-evenly bg-white text-black p-2 sm:p-3 md:p-5 z-10 w-[100%] sm:w-[60%] mx-auto rounded-2xl">
-          <div className="flex flex-col flex-1">
+          <div className="flex flex-col flex-1 md:pr-3">
             <select
               name="primary-term"
               id="primary-term"
-              className="w-28 sm:w-36 md:w-44 mb-1 sm:mb-2 text-xs sm:text-sm md:text-base"
+              className="w-28 sm:w-36 md:w-full  mb-1 sm:mb-2 text-xs sm:text-sm md:text-[12px] text-gray-400"
             >
               <option value="Primary">Primary Term</option>
               <option value="Primary Term">Primary Term</option>
@@ -55,11 +55,11 @@ const HomePage = () => {
               Enter the term
             </label>
           </div>
-          <div className="flex flex-col flex-1 md:w-56 " >
+          <div className="flex flex-col flex-1 md:w-56  md:pr-3" >
             <select
               name="secondary-term"
               id="secondary-term"
-              className="w-28 sm:w-36 md:w-44 mb-1 sm:mb-2 text-xs sm:text-sm md:text-base"
+              className="w-28 sm:w-36 md:w-full mb-1 sm:mb-2 text-xs sm:text-sm md:text-[12px] text-gray-400"
             >
               <option value="volvo">Secondary Term</option>
               <option value="Secondary Term">Secondary Term</option>
@@ -79,11 +79,13 @@ const HomePage = () => {
 
       </div>
       <div className="relative">
-        <h1 className="py-7 pb-16 z-10">Find Herbs in a Specific Location/Region</h1>
+        <h1 className="py-7 pb-16 z-10 text-center">Find Herbs in a Specific Location/Region</h1>
       </div>
 
 
         <GoogleMapComponent/>
+
+        <button className="mt-10 border border-gray-100 px-20 py-3 rounded-lg">Normal Map</button>
 
 
     </div>
