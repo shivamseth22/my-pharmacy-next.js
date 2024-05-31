@@ -3,6 +3,8 @@ import Image from "next/image";
 import cactusPlant from "../../../public/assets/cactusPlant.svg";
 import aloveraPlant from "../../../public/assets/aloveraPlant.svg";
 import GoogleMapComponent from "./GoogleMapComponent";
+import prev from "../../../public/previousBtn.svg";
+import next from "../../../public/nextbtn.svg";
 
 const HomePage = () => {
   return (
@@ -18,8 +20,12 @@ const HomePage = () => {
       className="absolute top-40 left-24"
       /> */}
       <div className="flex flex-col justify-center items-center gap-4 z-10">
-        <h1 className="text-3xl text-center">Citizens&apos; Portal of Medicinal Plants</h1>
-        <p className="text-xl text-center">Your Guide to Nature&apos;s Pharmacy!</p>
+        <h1 className="text-3xl text-center">
+          Citizens&apos; Portal of Medicinal Plants
+        </h1>
+        <p className="text-xl text-center">
+          Your Guide to Nature&apos;s Pharmacy!
+        </p>
       </div>
       <div className="pt-16 text-sm text-center z-10">
         <p>Type your term below and let’s start this journey together!</p>
@@ -55,7 +61,7 @@ const HomePage = () => {
               Enter the term
             </label>
           </div>
-          <div className="flex flex-col flex-1 md:w-56  md:pr-3" >
+          <div className="flex flex-col flex-1 md:w-56  md:pr-3">
             <select
               name="secondary-term"
               id="secondary-term"
@@ -76,17 +82,31 @@ const HomePage = () => {
             </button>
           </div>
         </div>
-
       </div>
       <div className="relative">
-        <h1 className="py-7 pb-16 z-10 text-center">Find Herbs in a Specific Location/Region</h1>
+        <h1 className="py-7 pb-16 z-10 text-center">
+          Find Herbs in a Specific Location/Region
+        </h1>
       </div>
 
 
-        <GoogleMapComponent/>
+<div className="flex w-full gap-5">
+  <Image src={prev} alt="prev" className="hidden sm:block" />
 
-        <button className="mt-10 border border-gray-100 px-20 py-3 rounded-lg">Normal Map</button>
+      <GoogleMapComponent />
 
+      <Image src={next} alt="prev" className="hidden sm:block" />
+</div>
+
+
+<div className="flex w-full gap-5 items-center justify-center mt-10">
+  <Image src={prev} alt="prev" className=" sm:hidden" />
+
+<button className=" border border-gray-100 px-20 py-3 rounded-lg">
+        Normal Map
+      </button>
+      <Image src={next} alt="prev" className=" sm:hidden" />
+</div>
 
     </div>
   );
