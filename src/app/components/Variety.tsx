@@ -7,74 +7,76 @@ import differentTratment from "../../../public/assets/varietyImages/differentTra
 import healers from "../../../public/assets/varietyImages/healers.svg";
 import localPractitionars from "../../../public/assets/varietyImages/localPractitionars.svg";
 import medicalPlant from "../../../public/assets/varietyImages/medicalPlant.svg";
+import { useTranslations } from "next-intl";
 
 const Variety = () => {
+  const t= useTranslations("Index")
   const items = [
-    {
-      src: medicalPlant,
-      alt: "Medical Plant",
-      title: "Medicinal Plant",
-      description: "Discover the healing power of nature’s pharmacy. Dive into our extensive database to learn about the diverse medicinal plants and their uses.",
-    },
-    {
-      src: aayurvedicAushadhi,
-      alt: "Ayurvedic Aushadhi",
-      title: "Ayurvedic Aushadhi",
-      description: "Unearth the secrets of Ayurveda with us. Explore our collection of Ayurvedic Aushadhi and understand their role in promoting health and wellness.",
-    },
-    {
-      src: classicalReference,
-      alt: "Classical Reference",
-      title: "Classical References (Shlokas, Samhitas, etc)",
-      description: "Dive into the wisdom of the ancients.",
-    },
-    {
-      src: ScientificRefrence,
-      alt: "Scientific Reference",
-      title: "Modern Scientific References (Journals, Scientific Research Papers)",
-      description: "Stay updated with the latest scientific discoveries on Ayurveda.",
-    },
-    {
-      src: differentDisease,
-      alt: "Different Disease",
-      title: "Different Diseases",
-      description: "Details on different diseases.",
-    },
-    {
-      src: differentTratment,
-      alt: "Different Treatment",
-      title: "Different Kinds of Treatments",
-      description: "Different kinds of treatment methods.",
-    },
-    {
-      src: localPractitionars,
-      alt: "Local Practitioners",
-      title: "Local Practitioners",
-      description: "Local practitioners and their details.",
-    },
-    {
-      src: healers,
-      alt: "Healers",
-      title: "Healers, Healer Networks",
-      description: "Healers and healer networks.",
-    },
-  ];
+  {
+    src: medicalPlant,
+    alt: "Medical Plant",
+    title: t("Medicinal_Plant"),
+    description: t("Discover_the_healing_power_of_natures_pharmacy"),
+  },
+  {
+    src: aayurvedicAushadhi,
+    alt: "Ayurvedic Aushadhi",
+    title: t("Ayurvedic_Aushadhi"),
+    description: t("Unearth_the_secrets_of_Ayurveda_with_us"),
+  },
+  {
+    src: classicalReference,
+    alt: "Classical Reference",
+    title: t("Classical_Reference"),
+    description: t("Dive_into_the_wisdom_of_the_ancients"),
+  },
+  {
+    src: ScientificRefrence,
+    alt: "Scientific Reference",
+    title: t("Scientific_Reference"),
+    description: t("Stay_updated_with_the_latest_scientific_discoveries_on_Ayurveda"),
+  },
+  {
+    src: differentDisease,
+    alt: "Different Disease",
+    title: t("Different_Diseases"),
+    description: t("Details_on_different_diseases"),
+  },
+  {
+    src: differentTratment,
+    alt: "Different Treatment",
+    title: t("Different_Kinds_of_Treatments"),
+    description: t("Different_kinds_of_treatment_methods"),
+  },
+  {
+    src: localPractitionars,
+    alt: "Local Practitioners",
+    title: t("Local_Practitioners"),
+    description: t("Local_practitioners_and_their_details"),
+  },
+  {
+    src: healers,
+    alt: "Healers",
+    title: t("Healers"),
+    description: t("Healers_and_healer_networks"),
+  },
+];
 
-  return (
-    <div className="bg-[#F0FFD5] m-0 md:m-16 rounded-3xl px-8 md:px-20 flex flex-col items-center">
-      <h1 className="text-3xl md:text-4xl p-6 md:p-14">Explore the Vast Variety of Resources at CPMP!</h1>
-      <div className="flex flex-wrap pb-8 md:pb-14">
-        {items.map((item, index) => (
-          <div key={index} className="w-full md:w-1/2 p-4">
-            <Image src={item.src} alt={item.alt}/>
-            <h2 className="text-lg md:text-xl font-semibold mt-4">{item.title}</h2>
-            <p className="mt-2 text-[#646A69] text-sm md:text-base">{item.description}</p>
-            <button className="mt-4 py-2 px-6 md:px-8 font-semibold">Read More</button>
-          </div>
-        ))}
-      </div>
+return (
+  <div className="bg-[#F0FFD5] m-0 md:m-16 rounded-3xl px-8 md:px-20 flex flex-col items-center">
+    <h1 className="text-3xl md:text-4xl p-6 md:p-14">{t("Explore_the_Vast_Variety_of_Resources_at_CPMP")}</h1>
+    <div className="flex flex-wrap pb-8 md:pb-14">
+      {items.map((item, index) => (
+        <div key={index} className="w-full md:w-1/2 p-4">
+          <Image src={item.src} alt={item.alt}/>
+          <h2 className="text-lg md:text-xl font-semibold mt-4">{item.title}</h2>
+          <p className="mt-2 text-[#646A69] text-sm md:text-base">{item.description}</p>
+          <button className="mt-4 py-2  font-semibold">{t("Read_More")}</button>
+        </div>
+      ))}
     </div>
-  );
+  </div>
+);
 };
 
 export default Variety;

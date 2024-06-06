@@ -1,6 +1,7 @@
 'use client'
 import React from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import { usePathname } from "next/navigation";
 
 const containerStyle = {
   width: "100%",
@@ -15,8 +16,14 @@ const center = {
 
 
 const GoogleMapComponent = () => {
+  const pathname = usePathname();
+  const route = pathname;
+  const routeWithoutSlash = route.slice(1); // This removes the leading slash
+  console.log(routeWithoutSlash);
   return (
-    <LoadScript googleMapsApiKey="AIzaSyDaclrl9SdPUah6kMRCYgdLbZD6zYgJdQA">
+    <LoadScript
+    language={routeWithoutSlash}
+    googleMapsApiKey="AIzaSyDaclrl9SdPUah6kMRCYgdLbZD6zYgJdQA">
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={8}>
         {/* Child components, such as markers, can be added here */}
       </GoogleMap>
