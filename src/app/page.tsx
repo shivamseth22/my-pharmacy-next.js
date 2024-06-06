@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import HomePage from "./components/HomePage";
 import Variety from "./components/Variety";
 import OwnContentSection from "./components/OwnContentSection";
@@ -13,7 +13,6 @@ export default function Home() {
       <OwnContentSection/>
       <AboutUs/>
       <Footer/>
-
     </main>
   );
 }

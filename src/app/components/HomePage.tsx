@@ -50,7 +50,7 @@ const HomePage = () => {
             <select
               name="primary-term"
               id="primary-term"
-              className="w-28 sm:w-36 md:w-full  mb-1 sm:mb-2 text-xs sm:text-sm md:text-[12px] text-gray-400"
+              className="w-28 sm:w-36 md:w-full mb-1 sm:mb-2 text-xs sm:text-sm md:text-[12px] text-gray-400"
             >
               <option value="Primary">Primary Term</option>
               <option value="Primary Term">Primary Term</option>
